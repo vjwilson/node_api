@@ -10,10 +10,6 @@ var DB_HOST = process.env.DB_HOST;
 var DB_USER = process.env.DB_USER;
 var DB_PASSWORD = process.env.DB_PASSWORD;
 var DB_DATABASE = process.env.DB_DATABASE;
-console.log('DB_HOST', DB_HOST);
-console.log('DB_USER', DB_USER);
-console.log('DB_PASSWORD', DB_PASSWORD);
-console.log('DB_DATABASE', DB_DATABASE);
 
 var connectionString = 'mongodb://' + 
                        DB_USER + 
@@ -23,8 +19,7 @@ var connectionString = 'mongodb://' +
                        DB_HOST +
                        '/' +
                        DB_DATABASE;
-console.log('connectionString', connectionString);
-
+console.log('Connecting to database with ', connectionString);
 
 mongoose.connect(connectionString);
 
